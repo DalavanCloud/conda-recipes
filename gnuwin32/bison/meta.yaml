@@ -1,0 +1,22 @@
+{% set version = "2.4.1" %}
+{% set md5 = "9d3ccf30fc00ba5e18176c33f45aee0e" %}
+
+package:
+  name: gnuwin-bison
+  version: {{ version }} 
+
+source:
+  fn : bison-{{ version }}-bin.zip
+  url: http://downloads.sourceforge.net/gnuwin32/bison-{{ version }}-bin.zip
+  md5: {{ md5 }}
+
+requirements:
+  run:
+    - gnuwin-libiconv
+    - gnuwin-libintl
+    - gnuwin-regex
+
+about:
+  home: http://gnuwin32.sourceforge.net/packages/bison.htm
+  license: GPLv3
+

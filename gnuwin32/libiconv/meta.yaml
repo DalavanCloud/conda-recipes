@@ -1,0 +1,19 @@
+{% set version = "1.9.2" %}
+{% set md5 = "2ded584cdcfc87e1e3db257dd5b44651" %}
+
+package:
+  name: gnuwin-libiconv
+  version: {{ version }} 
+
+build:
+  number: 1
+
+source:
+  fn : libiconv-{{ version }}-1-bin.zip
+  url: https://downloads.sourceforge.net/project/gnuwin32/libiconv/{{ version }}-1/libiconv-{{ version }}-1-bin.zip
+  md5: {{ md5 }}
+
+about:
+  home: http://gnuwin32.sourceforge.net/packages/libiconv.htm
+  license: GPLv3
+
