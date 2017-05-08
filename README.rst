@@ -33,8 +33,8 @@ Also, make sure that your local conda installation is up-to-date before each bui
 
 .. code-block:: bash
 
-    $ conda upgrade conda
-    $ conda upgrade conda-build anaconda-client
+    $ conda upgrade -y conda
+    $ conda upgrade -y conda-build anaconda-client
 
 Then enter the subdirectory that contains the recipe of the required package and run:
 
