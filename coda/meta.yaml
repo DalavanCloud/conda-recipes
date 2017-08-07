@@ -10,28 +10,31 @@ source:
   url: https://github.com/stcorp/coda/releases/download/{{ version }}/coda-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
+build:
+  features:
+    - vc9  # [win and py27]
+
 requirements:
   build:
     - python
     - setuptools
-    - bison
-    - flex
-    - automake
-    - autoconf
-    - libtool
+    - bison  # [not win]
+    - flex  # [not win]
+    - m2-bison  # [win]
+    - m2-flex  # [win]
+    - automake  # [not win]
+    - autoconf  # [not win]
+    - libtool  # [not win]
+    - cmake  # [win]
     - numpy
-    - zlib
     - hdf4
     - hdf5
-    - jpeg
 
   run:
     - python
     - numpy
-    - zlib
     - hdf4
     - hdf5
-    - jpeg
 
 about:
   home: https://github.com/stcorp/coda
