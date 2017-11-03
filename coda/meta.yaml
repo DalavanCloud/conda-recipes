@@ -1,5 +1,5 @@
-{% set version = "2.18.1" %}
-{% set sha256 = "1e648121f4498098ec06049cf4ca02e8b286370010a245cf676c9036ba282310" %}
+{% set version = "2.18.3" %}
+{% set sha256 = "e0f72ed7927431748907b57b3fcfa7515ee071162f138e784555d6ca377b9ffe" %}
 
 package:
   name: coda
