@@ -1,5 +1,5 @@
-{% set version = "1.0" %}
-{% set sha256 = "eb11bd6a2cff6e833bfae4c1bc1f1802dfbc361f53fe015e762dc829ae158904" %}
+{% set version = "1.1" %}
+{% set sha256 = "f33117cd305369b8b72549bd6b1a8055c30d1df24b286c5ff0e6e3332486c636" %}
 
 package:
   name: harp
