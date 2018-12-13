@@ -1,39 +1,41 @@
-{% set version = "1.1" %}
-{% set sha256 = "f33117cd305369b8b72549bd6b1a8055c30d1df24b286c5ff0e6e3332486c636" %}
+{% set version = "1.4" %}
+{% set sha256 = "88f4977c86b31878c7f55518e7c1cde617f70f4460029c872e01b29573350bc0" %}
 
 package:
   name: harp
   version: {{ version }} 
 
 source:
-  fn : harp-{{ version }}.tar.gz
-  url: https://github.com/stcorp/harp/releases/download/{{ version }}/harp-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  path: harp-{{ version }}
+#  fn : harp-{{ version }}.tar.gz
+#  url: https://github.com/stcorp/harp/releases/download/{{ version }}/harp-{{ version }}.tar.gz
+#  sha256: {{ sha256 }}
 
 requirements:
   build:
+    - cmake
+    - bison  # [not win]
+    - flex  # [not win]
+    - m2-bison  # [win]
+    - m2-flex  # [win]
+    - coda
     - python
-    - setuptools
-    - flex
-    - automake
-    - autoconf
-    - libtool
+    - numpy
+    - cffi
     - zlib
-    - zip
     - hdf4
     - hdf5
-    - numpy
-    - zip
-    - cffi
-    - coda
+    - jpeg
 
   run:
-    - python
     - coda
-    - hdf4
-    - hdf5
+    - python
     - numpy
     - cffi
+    - zlib
+    - hdf4
+    - hdf5
+    - jpeg
 
 about:
   home: https://github.com/stcorp/harp

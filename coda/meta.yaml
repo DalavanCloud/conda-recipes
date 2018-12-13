@@ -1,24 +1,28 @@
-{% set version = "2.18.3" %}
-{% set sha256 = "e0f72ed7927431748907b57b3fcfa7515ee071162f138e784555d6ca377b9ffe" %}
+{% set version = "2.19" %}
+{% set sha256 = "82b6bda18bb649946a7c7b1ec7b0302e6ae5315d512ae043b0faf998c91222c9" %}
 
 package:
   name: coda
   version: {{ version }} 
 
 source:
-  fn : coda-{{ version }}.tar.gz
-  url: https://github.com/stcorp/coda/releases/download/{{ version }}/coda-{{ version }}.tar.gz
+  fn: 3ca3c8baea18150fc7d8b8e3c7936d95d92a6fb7.zip
+  url: https://github.com/stcorp/coda/archive/3ca3c8baea18150fc7d8b8e3c7936d95d92a6fb7.zip
+#  fn : coda-{{ version }}.tar.gz
+#  url: https://github.com/stcorp/coda/releases/download/{{ version }}/coda-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 requirements:
   build:
+    - cmake
+    - autoconf  # [not win]
+    - automake  # [not win]
+    - libtool  # [not win]
+    - bison  # [not win]
+    - flex  # [not win]
+    - m2-bison  # [win]
+    - m2-flex  # [win]
     - python
-    - setuptools
-    - bison
-    - flex
-    - automake
-    - autoconf
-    - libtool
     - numpy
     - zlib
     - hdf4

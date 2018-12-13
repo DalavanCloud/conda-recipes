@@ -1,14 +1,13 @@
-./bootstrap
+export CMAKE_LIBRARY_PATH=$PREFIX/lib
 
-if [ "$(uname)" == Darwin ]; then
-    export CFLAGS="-headerpad_max_install_names $CFLAGS"
-fi
+# This is needed to allow bison to find m4
+export M4="$(command -v m4)"
 
-export CFLAGS="-I$PREFIX/include $CFLAGS"
-export LDFLAGS="-L$PREFIX/lib $LDFLAGS"
-
-./configure --prefix="$PREFIX" \
-            --enable-python PYTHON="$PREFIX/bin/python"
-
-make
+cmake \
+  -DCMAKE_INSTALL_PREFIX="$PREFIX" \
+  -DHARP_BUILD_PYTHON=True \
+  -DCODA_INCLUDE_DIR="$PREFIX/include" \
+  -DHDF4_INCLUDE_DIR="$PREFIX/include" \
+  -DHDF5_INCLUDE_DIR="$PREFIX/include"
+make VERBOSE=1
 make install
