@@ -1,15 +1,15 @@
-{% set version = "1.4" %}
-{% set sha256 = "88f4977c86b31878c7f55518e7c1cde617f70f4460029c872e01b29573350bc0" %}
+{% set version = "1.5" %}
+{% set sha256 = "467ffd9223899f23ff2262fb9a1d3df192b82de41bf5150c7b43fb29edd09f03" %}
+{% set tag = "1.5-beta" %}
 
 package:
   name: harp
   version: {{ version }} 
 
 source:
-  path: harp-{{ version }}
-#  fn : harp-{{ version }}.tar.gz
-#  url: https://github.com/stcorp/harp/releases/download/{{ version }}/harp-{{ version }}.tar.gz
-#  sha256: {{ sha256 }}
+  fn : harp-{{ version }}.tar.gz
+  url: https://github.com/stcorp/harp/releases/download/{{ tag }}/harp-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 requirements:
   build:
