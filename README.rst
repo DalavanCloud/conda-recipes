@@ -49,5 +49,5 @@ To upload this package use:
 .. code-block:: bash
 
     $ anaconda login
-    $ anaconda upload <root>/conda-bld/<arch>/<pkgname>.tar.bz2
+    $ anaconda upload --force --user stcorp <root>/conda-bld/<arch>/<pkgname>.tar.bz2
 
