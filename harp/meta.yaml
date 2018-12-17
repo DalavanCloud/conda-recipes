@@ -1,6 +1,6 @@
 {% set version = "1.5" %}
-{% set sha256 = "467ffd9223899f23ff2262fb9a1d3df192b82de41bf5150c7b43fb29edd09f03" %}
-{% set tag = "1.5-beta" %}
+{% set sha256 = "2cb30d590c3e354c12c680a137c426f96e8cb6f09107b85921fc7b44ad121fb8" %}
+{% set tag = version %}
 
 package:
   name: harp

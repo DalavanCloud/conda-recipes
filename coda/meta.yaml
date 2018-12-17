@@ -1,6 +1,6 @@
 {% set version = "2.20" %}
-{% set sha256 = "453ac9129f5d91ca0cc1819e19fbfbbad4d1d431d69d76b103dc7b77017ff540" %}
-{% set tag = "2.20-beta" %}
+{% set sha256 = "6561b4a14dcc0a9e7947a0bdbafff2606e1b0df0acba2b4410ecfb671e6ba1ec" %}
+{% set tag = version %}
 
 package:
   name: coda
