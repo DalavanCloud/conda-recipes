@@ -6,7 +6,7 @@ This is a repository of `Conda <http://conda.pydata.org/>`_ recipies for items t
 Using stcorp packages
 ---------------------
 
-To use the Conda packages just install Anaconda or Miniconda and run ``conda install -c stcorp <pkgname>``.
+To use the Conda packages just install Anaconda or Miniconda and run ``conda install -c stcorp -c conda-forge <pkgname>``.
 
 
 Building packages
@@ -18,7 +18,7 @@ To build a package, install Anaconda or Miniconda and then install the following
 
     $ conda install conda-build anaconda-client
 
-Packages need to be build locally on each of the supported platforms (usually ``linux-32``, ``linux-64``, ``osx-64``, ``win-32``, and ``win-64``).
+Packages need to be build locally on each of the supported platforms (usually ``linux-64``, ``osx-64``, and ``win-64``).
 
 The `anaconda-client` is only needed of you use Miniconda and don't want the full Anaconda environment. The Anaconda client is needed to upload packages to anaconda.org.
 
